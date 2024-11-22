@@ -1,0 +1,34 @@
+Project Overview
+This project applies machine learning techniques to perform regression on tabular data, predicting a target variable (Target_Pressure_(bar)). It employs various models, hyperparameter optimization using Optuna, and ensemble learning with a stacked regressor for enhanced performance. The pipeline includes data preprocessing, feature transformation, and advanced model training.
+
+The project is designed as part of a university assignment.
+
+
+Data Preprocessing:
+- Handles missing values using KNN imputation.
+- Scales features using RobustScaler.
+- Transforms target and feature variables to reduce skewness.
+Model Training:
+- Implements MLPRegressor, LightGBM, Random Forest, and a custom ResNetTabular model.
+- Optimizes model hyperparameters using Optuna.
+- Evaluates model performance using MAPE and R² metrics.
+Stacked Ensemble:
+- Combines individual model predictions for improved accuracy.
+Predictions:
+- Outputs predictions on test data and saves them in test_predictions.csv.
+
+Project Pipeline
+1. Data Preprocessing:
+   - Cleans and transforms raw data.
+   - Reduces skewness in features and normalizes the target variable.
+2. Model Tuning:
+   - Optimizes hyperparameters for individual models using Optuna.
+   - Selects the best parameters for each model.
+3. Model Training:
+   - Trains models on preprocessed data.
+   - Combines individual models into a stacked ensemble.
+4. Evaluation:
+   - Computes MAPE and R² for each model and the ensemble.
+5. Prediction:
+   - Generates predictions for test data.
+   - Converts predictions back to the original scale and saves them.
